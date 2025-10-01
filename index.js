@@ -1,8 +1,17 @@
 var player1 =prompt("Enter player 1 name:");
 var player2 =prompt("Enter player 2 name:");
 
-$("h1").css("color", "green");
+player1 = formatName(player1);
+player2 = formatName(player2);
 
+if (player1===null || player1===""){
+    player1 = "Player 1";
+}
+if (player2===null || player2===""){
+    player2 = "Player 2";
+}
+
+$("h1").css("color", "green");
 $(".players .player1").text(player1);
 $(".players .player2").text(player2);
 
@@ -31,5 +40,6 @@ $(".reset-btn").on("click", function () {
     $(".dice .player2").attr("src","./DicePics/side_1.png")
 })
 
-
-
+function formatName(str){
+    return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+}
