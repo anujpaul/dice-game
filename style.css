@@ -1,12 +1,14 @@
 h1{
     background-color:bisque;
     position: relative;
-    left: 50px;
-    top:50px;
+    /* left: 50px;
+    top:50px; */
+    text-align: center ;
+    margin: 40px 10px 0 10px;
     
 }
 
-
+  
 
 .players{
     display:flex;
